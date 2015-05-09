@@ -17,5 +17,15 @@ function taiwangeo () {
 	return output;
 }
 
+function country (){
+	var json = fs.readFileSync('./county.json')
+	output.content = json
+	output.type = 'application/json'
+	console.log("Request handler 'counties.json' was called.")
+
+	return output;
+}
+
 exports.start = start
 exports.taiwangeo = taiwangeo
+exports.country = country

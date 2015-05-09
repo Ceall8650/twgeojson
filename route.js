@@ -1,6 +1,7 @@
 function route (handle, pathname) {
 	// body...
 	console.log("About to route a request for " + pathname);
+	console.log(handle[pathname])
 	if( typeof handle[pathname] === 'function'){
 		return handle[pathname]();
 	}
